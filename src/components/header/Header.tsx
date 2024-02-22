@@ -32,7 +32,7 @@ const Header = () => {
 							<div
 								key={section.targetId}
 								className={
-									"h-full p-1 px-4 bg-white rounded-full bg-opacity-20 text-white"
+									"h-full p-1 px-4 bg-white rounded-full bg-opacity-20"
 								}
 							>
 								<Link href={`#${section.targetId}`}>{section.name}</Link>

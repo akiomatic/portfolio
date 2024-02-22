@@ -9,7 +9,7 @@ const Hero = () => {
 					Hello, I'm <span className={"text-lime-200 font-bold"}>Akio</span>!
 				</h1>
 				<h2 className={"text-3xl pt-2"}>A Front-End Developer</h2>
-				<p className={"text-lg pt-6 text-white/60"}>
+				<p className={"text-lg pt-6 text-current/60"}>
 					I'm Akio Osawa, a passionate programmer since 2016,{" "}
 					<span
 						className={
