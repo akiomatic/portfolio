@@ -6,7 +6,7 @@ interface ISection {
 }
 
 const sections: Array<ISection> = [
-	{ name: "About", targetId: "about" },
+	{ name: "About Me", targetId: "about" },
 	{ name: "Projects", targetId: "projects" },
 	{ name: "Contact", targetId: "contact" },
 ];
