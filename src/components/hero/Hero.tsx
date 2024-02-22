@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 const Hero = () => {
 	return (
 		<div
@@ -11,13 +12,14 @@ const Hero = () => {
 				<h2 className={"text-3xl pt-2"}>A Front-End Developer</h2>
 				<p className={"text-lg pt-6 text-current/60"}>
 					I'm Akio Osawa, a passionate programmer since 2016,{" "}
-					<span
+					<Link
+						href={"#about"}
 						className={
 							"drop-shadow-3xl shadow-white font-semibold text-lime-200 cursor-pointer"
 						}
 					>
 						inspired by Minecraft
-					</span>
+					</Link>
 					.
 				</p>
 				{/*<div className={"flex w-full my-5"}>*/}
