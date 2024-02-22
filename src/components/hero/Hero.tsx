@@ -1,13 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
-
 const Hero = () => {
-	const [isHovering, setIsHovering] = useState(false);
-
-	const inspirationText = isHovering ? "How?" : "inspired by Minecraft";
-
 	return (
 		<div
 			className={
