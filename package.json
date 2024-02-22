@@ -8,7 +8,8 @@
     "start": "next start",
     "format": "biome format . --write",
     "lint": "biome lint .",
-    "check": "biome check --apply ."
+    "check": "biome check --apply .",
+    "postinstall": "lefthook install"
   },
   "dependencies": {
     "next": "14.1.0",
