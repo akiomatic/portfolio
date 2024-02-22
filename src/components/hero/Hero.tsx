@@ -2,9 +2,7 @@ import Image from "next/image";
 const Hero = () => {
 	return (
 		<div
-			className={
-				"h-screen w-full flex justify-center items-center bg-[#0B1215] space-x-20"
-			}
+			className={"h-screen w-full flex justify-center items-center space-x-20"}
 		>
 			<div className={"flex flex-col items-start w-[500px]"}>
 				<h1 className={"text-6xl"}>
