@@ -27,7 +27,7 @@ const Header = () => {
 					<Link href={"/"}>akiomatic</Link>
 				</div>
 				<div className={"flex space-x-4"}>
-					{sections.map((section, index) => {
+					{sections.map((section) => {
 						return (
 							<div
 								key={section.targetId}
