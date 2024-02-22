@@ -13,7 +13,7 @@ const sections: Array<ISection> = [
 
 const Header = () => {
 	return (
-		<div
+		<nav
 			className={
 				"fixed top-0 left-0 h-[60px] w-full flex justify-center items-center mt-8"
 			}
@@ -41,7 +41,7 @@ const Header = () => {
 					})}
 				</div>
 			</div>
-		</div>
+		</nav>
 	);
 };
 
