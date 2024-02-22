@@ -20,7 +20,7 @@ const Header = () => {
 		>
 			<div
 				className={
-					"bg-white backdrop-filter backdrop-blur-md w-3/4 h-full rounded-full bg-opacity-20 border border-white border-opacity-20 flex items-center justify-between px-6"
+					"bg-white backdrop-filter backdrop-blur-md w-3/4 lg:w-2/3 h-full rounded-full bg-opacity-20 border border-white border-opacity-20 flex items-center justify-between px-6"
 				}
 			>
 				<div className={"flex"}>
