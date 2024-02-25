@@ -2,12 +2,7 @@
 export const JavaIcon = () => {
 	return (
 		// biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
-		<svg
-			version="1.1"
-			id="Capa_1"
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 502.632 502.632"
-		>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.632 502.632">
 			<path
 				d="M240.864,269.894c0,0-28.02-53.992-26.985-93.445c0.755-28.193,64.324-56.062,89.281-96.529
 			C328.074,39.431,300.054,0,300.054,0s6.234,29.077-10.376,59.147c-16.609,30.113-77.914,47.779-101.749,99.679
