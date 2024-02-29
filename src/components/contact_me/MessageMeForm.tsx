@@ -73,6 +73,7 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 				});
 			}
 
+			form.reset();
 			setOpen(false);
 		});
 	};
