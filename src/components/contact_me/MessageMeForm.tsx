@@ -62,8 +62,8 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 			try {
 				await sendEmail(data);
 				toast({
-					title: "Message sent",
-					description: "Thank you! I'll get back to you soon. 🚀",
+					title: "Message sent to me, Akio",
+					description: "Thank you! I'll get back to you soon!",
 				});
 			} catch (e) {
 				toast({
