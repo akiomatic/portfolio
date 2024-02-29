@@ -20,6 +20,10 @@ const TurnstileWidget = ({
 			onError={() => setCaptchaStatus("error")}
 			onExpire={() => setCaptchaStatus("expired")}
 			onSuccess={() => setCaptchaStatus("solved")}
+			options={{
+				theme: "light",
+				language: "en",
+			}}
 		/>
 	);
 };
