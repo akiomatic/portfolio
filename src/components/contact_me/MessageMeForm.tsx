@@ -1,3 +1,4 @@
+import TurnstileWidget from "@/components/captcha/TurnstileWidget";
 import { Button } from "@/components/shadcn_ui/button";
 import {
 	Form,
@@ -13,7 +14,7 @@ import { useToast } from "@/components/shadcn_ui/use-toast";
 import { sendEmail } from "@/lib/actions";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import React, { useTransition } from "react";
+import React, { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -45,6 +46,9 @@ interface IMessageMeFormProps extends React.ComponentPropsWithoutRef<"form"> {
 }
 
 const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
+	const [captchaStatus, setCaptchaStatus] = useState<
+		"idle" | "solved" | "error" | "expired"
+	>("idle");
 	const [isPending, startTransition] = useTransition();
 	const { toast } = useToast();
 
@@ -57,7 +61,24 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 		},
 	});
 
-	const onSubmit = (data: z.infer<typeof FormSchema>) => {
+	const onPreSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		if (isPending) return;
+
+		if (captchaStatus !== "solved") {
+			toast({
+				variant: "destructive",
+				title: "CAPTCHA not solved",
+				description: "Please solve the CAPTCHA before submitting.",
+			});
+			return;
+		}
+
+		await form.handleSubmit(onSubmit)();
+	};
+
+	const onSubmit = async (data: z.infer<typeof FormSchema>) => {
 		startTransition(async () => {
 			try {
 				await sendEmail(data);
@@ -81,7 +102,7 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 	return (
 		<Form {...form}>
 			<form
-				onSubmit={form.handleSubmit(onSubmit)}
+				onSubmit={(e) => onPreSubmit(e)}
 				className={cn("grid items-start gap-4", className)}
 			>
 				<FormField
@@ -128,10 +149,11 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 						</FormItem>
 					)}
 				/>
+				<TurnstileWidget setCaptchaStatus={setCaptchaStatus} />
 				<Button
 					type="submit"
 					className={`mt-4 ${
-						isPending
+						isPending || captchaStatus !== "solved"
 							? "bg-gray-400 hover:bg-gray-400 cursor-not-allowed"
 							: null
 					}`}
