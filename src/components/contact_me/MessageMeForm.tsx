@@ -122,7 +122,7 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 					control={form.control}
 					name="subject"
 					render={({ field }) => (
-						<FormItem className={"pt-2"}>
+						<FormItem>
 							<FormLabel htmlFor={"subject"}>Subject</FormLabel>
 							<FormControl>
 								<Input id="subject" {...field} />
@@ -135,7 +135,7 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 					control={form.control}
 					name="message"
 					render={({ field }) => (
-						<FormItem className={"pt-2"}>
+						<FormItem>
 							<FormLabel htmlFor={"message"}>Your message</FormLabel>
 							<FormControl>
 								<Textarea
@@ -149,10 +149,13 @@ const MessageMeForm = ({ className, setOpen }: IMessageMeFormProps) => {
 						</FormItem>
 					)}
 				/>
-				<TurnstileWidget setCaptchaStatus={setCaptchaStatus} />
+				<TurnstileWidget
+					className={"mt-4"}
+					setCaptchaStatus={setCaptchaStatus}
+				/>
 				<Button
 					type="submit"
-					className={`mt-4 ${
+					className={`mt-2 ${
 						isPending || captchaStatus !== "solved"
 							? "bg-gray-400 hover:bg-gray-400 cursor-not-allowed"
 							: null
