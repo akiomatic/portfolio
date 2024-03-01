@@ -98,7 +98,7 @@ export const getBrandIcon = (brand: Language | Tech) => {
 	}
 };
 
-const getSVGIcon = (icon: SimpleIcon) => {
+export const getSVGIcon = (icon: SimpleIcon) => {
 	return (
 		<svg
 			className={"pointer-events-none"}

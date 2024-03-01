@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/shadcn_ui/toaster";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -16,7 +17,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<head>
+				<script
+					src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+					async
+					defer
+				/>
+			</head>
+			<body className={inter.className}>
+				<main>{children}</main>
+				<Toaster />
+			</body>
 		</html>
 	);
 }
