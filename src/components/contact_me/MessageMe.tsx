@@ -19,11 +19,18 @@ import {
 	DrawerTrigger,
 } from "@/components/shadcn_ui/drawer";
 import { Breakpoints, useMediaQuery } from "@/hooks/use-media-query";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const MessageMe = () => {
 	const [open, setOpen] = useState(false);
+	const [isJavaScriptEnabled, setIsJavaScriptEnabled] = useState(false);
 	const isDesktop = useMediaQuery(Breakpoints.md);
+
+	useEffect(() => {
+		setIsJavaScriptEnabled(true);
+	}, []);
+
+	if (!isJavaScriptEnabled) return null;
 
 	if (isDesktop) {
 		return (
