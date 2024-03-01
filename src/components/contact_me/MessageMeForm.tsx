@@ -19,17 +19,27 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 const FormSchema = z.object({
-	email: z.string().email({
-		message: "Please enter a valid email address.",
-	}),
+	email: z
+		.string()
+		.transform((value) => value.replace(/\s+/g, ""))
+		.pipe(
+			z.string().email({
+				message: "Please enter a valid email address.",
+			}),
+		),
 	subject: z
 		.string()
-		.min(5, {
-			message: "Subject must be at least 5 characters.",
-		})
-		.max(50, {
-			message: "Subject must be at most 50 characters.",
-		}),
+		.transform((value) => value.replace(/\s+/g, ""))
+		.pipe(
+			z
+				.string()
+				.min(5, {
+					message: "Subject must be at least 5 characters.",
+				})
+				.max(50, {
+					message: "Subject must be at most 50 characters.",
+				}),
+		),
 	message: z
 		.string()
 		.min(10, {
