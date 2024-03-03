@@ -16,7 +16,7 @@ const Header = () => {
 	return (
 		<nav
 			className={
-				"fixed top-0 left-0 h-[60px] w-full flex justify-center items-center mt-8"
+				"fixed top-0 left-0 h-[60px] w-full flex justify-center items-center mt-8 z-50"
 			}
 		>
 			<div
