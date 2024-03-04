@@ -3,9 +3,15 @@ import Link from "next/link";
 const Hero = () => {
 	return (
 		<div
-			className={"h-screen w-full flex justify-center items-center space-x-20"}
+			className={
+				"h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row lg:space-x-20 p-10 lg:p-0 gap-y-16"
+			}
 		>
-			<div className={"flex flex-col items-start w-[500px]"}>
+			<div
+				className={
+					"flex flex-col items-center md:items-start text-center md:text-start w-[500px]"
+				}
+			>
 				<h1 className={"text-6xl"}>
 					Hello, I'm <span className={"text-lime-200 font-bold"}>Akio</span>!
 				</h1>
@@ -35,8 +41,8 @@ const Hero = () => {
 			<Image
 				src={"/images/placeholder-icon.webp"}
 				alt={"Placeholder icon"}
-				width={300}
-				height={300}
+				width={250}
+				height={250}
 				className={"rounded-full"}
 			/>
 		</div>
