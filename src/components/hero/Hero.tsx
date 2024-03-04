@@ -41,8 +41,8 @@ const Hero = () => {
 			<Image
 				src={"/images/placeholder-icon.webp"}
 				alt={"Placeholder icon"}
-				width={300}
-				height={300}
+				width={250}
+				height={250}
 				className={"rounded-full"}
 			/>
 		</div>
