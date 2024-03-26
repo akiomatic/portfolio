@@ -16,7 +16,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className={"scroll-smooth"}>
 			<head>
 				<script
 					src="https://challenges.cloudflare.com/turnstile/v0/api.js"
