@@ -1,5 +1,5 @@
 import MessageMe from "@/components/contact_me/MessageMe";
-import { getSVGIcon } from "@/lib/helpers";
+import { SVGIcon } from "@/lib/helpers";
 import React from "react";
 import {
 	SimpleIcon,
@@ -53,7 +53,7 @@ const ContactMe = () => {
 								"flex items-center justify-center w-[30px] h-[30px] fill-[#E5ECF0]"
 							}
 						>
-							{getSVGIcon(social.icon)}
+							<SVGIcon icon={social.icon} />
 						</a>
 					);
 				})}

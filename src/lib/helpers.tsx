@@ -16,25 +16,25 @@ import {
 export const getBrandIcon = (brand: Language | Tech) => {
 	switch (brand) {
 		case Language.Dart:
-			return getSVGIcon(siDart);
+			return SVGIcon({ icon: siDart });
 		case Language.JavaScript:
-			return getSVGIcon(siJavascript);
+			return SVGIcon({ icon: siJavascript });
 		case Language.TypeScript:
-			return getSVGIcon(siTypescript);
+			return SVGIcon({ icon: siTypescript });
 		case Tech.Flutter:
-			return getSVGIcon(siFlutter);
+			return SVGIcon({ icon: siFlutter });
 		case Tech.React:
-			return getSVGIcon(siReact);
+			return SVGIcon({ icon: siReact });
 		case Tech.Next:
-			return getSVGIcon(siNextdotjs);
+			return SVGIcon({ icon: siNextdotjs });
 		case Tech.TailwindCSS:
-			return getSVGIcon(siTailwindcss);
+			return SVGIcon({ icon: siTailwindcss });
 		case Tech.ShadcnUI:
-			return getSVGIcon(siShadcnui);
+			return SVGIcon({ icon: siShadcnui });
 		case Tech.Firebase:
-			return getSVGIcon(siFirebase);
+			return SVGIcon({ icon: siFirebase });
 		case Tech.Supabase:
-			return getSVGIcon(siSupabase);
+			return SVGIcon({ icon: siSupabase });
 		case Language.Java:
 			return (
 				<svg
@@ -98,7 +98,11 @@ export const getBrandIcon = (brand: Language | Tech) => {
 	}
 };
 
-export const getSVGIcon = (icon: SimpleIcon) => {
+interface ISVGIconProps {
+	icon: SimpleIcon;
+}
+
+export const SVGIcon = ({ icon }: ISVGIconProps) => {
 	return (
 		<svg
 			className={"pointer-events-none"}

@@ -1,9 +1,9 @@
 import { Toaster } from "@/components/shadcn_ui/toaster";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -16,7 +16,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className={"scroll-smooth"}>
 			<head>
 				<script
 					src="https://challenges.cloudflare.com/turnstile/v0/api.js"
@@ -24,7 +24,7 @@ export default function RootLayout({
 					defer
 				/>
 			</head>
-			<body className={inter.className}>
+			<body className={robotoMono.className}>
 				<main>{children}</main>
 				<Toaster />
 			</body>
