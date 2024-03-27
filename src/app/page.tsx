@@ -1,8 +1,8 @@
-import About from "@/components/about/About";
 import ContactMe from "@/components/contact_me/ContactMe";
 import Hero from "@/components/hero/Hero";
 import Skills from "@/components/skills/Skills";
 import Works from "@/components/works/Works";
+import About from "@/features/about/About";
 import Navbar from "@/features/navbar/Navbar";
 
 export default function Home() {
