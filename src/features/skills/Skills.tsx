@@ -1,4 +1,4 @@
-import SkillsContainer from "@/components/skills/SkillsContainer";
+import SkillsContainer from "@/features/skills/SkillsContainer";
 import { JavaIcon } from "@/utils/icons";
 import React from "react";
 import {

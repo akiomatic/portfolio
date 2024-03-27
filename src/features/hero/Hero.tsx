@@ -1,7 +1,7 @@
 "use client";
 
-import { Terrain } from "@/components/hero/Terrain";
 import { Button } from "@/components/shadcn_ui/button";
+import { Terrain } from "@/features/hero/Terrain";
 import { SVGIcon } from "@/lib/helpers";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
