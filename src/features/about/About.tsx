@@ -14,8 +14,8 @@ const About = () => {
 			<div className={"text-4xl font-bold mb-12"}>About Me</div>
 			<div
 				className={cn(
-					"flex justify-center items-center gap-x-14 gap-y-14",
-					"flex-col md:flex-row",
+					"flex justify-center items-center gap-14",
+					"flex-col lg:flex-row",
 					"mx-10",
 				)}
 			>
