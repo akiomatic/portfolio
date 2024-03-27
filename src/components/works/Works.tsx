@@ -1,6 +1,6 @@
 import WorksContainer, {
 	ProjectPosition,
-} from "@/components/projects/WorksContainer";
+} from "@/components/works/WorksContainer";
 import { Language, Tech } from "@/constants/technologies";
 import { siFlutter } from "simple-icons";
 
