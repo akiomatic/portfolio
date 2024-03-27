@@ -6,7 +6,7 @@ const About = () => {
 		<div
 			id={"about"}
 			className={
-				"flex flex-col items-center justify-center w-screen xl:w-[1200px] py-24"
+				"flex flex-col items-center justify-center w-screen xl:w-[1200px] py-24 scroll-mt-12"
 			}
 		>
 			<div className={"text-4xl font-bold mb-12"}>About Me</div>
