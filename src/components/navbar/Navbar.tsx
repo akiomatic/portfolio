@@ -13,7 +13,7 @@ const sections: Array<ISection> = [
 	{ name: "Contact Me", targetId: "contact-me" },
 ];
 
-const Header = () => {
+const Navbar = () => {
 	return (
 		<nav
 			className={
@@ -59,4 +59,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default Navbar;
