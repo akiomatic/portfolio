@@ -21,7 +21,7 @@ const About = () => {
 			>
 				<Image
 					src={"/images/placeholder-icon.webp"}
-					alt={"Selfie"}
+					alt={"A selfie of me"}
 					width={250}
 					height={250}
 					priority
