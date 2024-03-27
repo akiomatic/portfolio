@@ -7,7 +7,7 @@ interface IProjectsContainerProps {
 	children: React.ReactNode;
 }
 
-const ProjectsContainer = ({ children }: IProjectsContainerProps) => {
+const WorksContainer = ({ children }: IProjectsContainerProps) => {
 	return (
 		<div className={"flex flex-col items-center justify-center my-12"}>
 			{children}
@@ -172,10 +172,10 @@ const TechStack = ({ className, techs }: ITechStack) => {
 	);
 };
 
-ProjectsContainer.Project = Project;
-ProjectsContainer.DevDate = DevDate;
-ProjectsContainer.Title = Title;
-ProjectsContainer.Description = Description;
-ProjectsContainer.TechStack = TechStack;
+WorksContainer.Project = Project;
+WorksContainer.DevDate = DevDate;
+WorksContainer.Title = Title;
+WorksContainer.Description = Description;
+WorksContainer.TechStack = TechStack;
 
-export default ProjectsContainer;
+export default WorksContainer;

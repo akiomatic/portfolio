@@ -1,18 +1,19 @@
 import About from "@/components/about/About";
 import ContactMe from "@/components/contact_me/ContactMe";
-import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
-import Projects from "@/components/projects/Projects";
 import Skills from "@/components/skills/Skills";
+import Works from "@/components/works/Works";
+import Navbar from "@/features/navbar/Navbar";
 
 export default function Home() {
 	return (
-		<div className={"flex flex-col items-center text-[#E5ECF0] bg-[#0B1215]"}>
-			<Header />
+		<div className={"flex flex-col items-center text-[#fff] bg-[#0B1215]"}>
+			<Navbar />
 			<Hero />
 			<About />
 			<Skills />
 			<Projects />
+			<Works />
 			<ContactMe />
 		</div>
 	);

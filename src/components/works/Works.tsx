@@ -1,18 +1,18 @@
-import ProjectsContainer, {
+import WorksContainer, {
 	ProjectPosition,
-} from "@/components/projects/ProjectsContainer";
+} from "@/components/works/WorksContainer";
 import { Language, Tech } from "@/constants/technologies";
 import { siFlutter } from "simple-icons";
 
-const Projects = () => {
+const Works = () => {
 	return (
 		<div
-			id={"projects"}
+			id={"works"}
 			className={"flex flex-col items-center justify-center w-screen py-24"}
 		>
-			<h1 className={"text-4xl font-bold"}>Projects</h1>
-			<ProjectsContainer>
-				<ProjectsContainer.Project
+			<h1 className={"text-4xl font-bold"}>Works</h1>
+			<WorksContainer>
+				<WorksContainer.Project
 					iconText={"2012"}
 					imageSrc={[
 						{
@@ -22,16 +22,16 @@ const Projects = () => {
 					]}
 					position={ProjectPosition.LEFT}
 				>
-					<ProjectsContainer.DevDate startYear={2012} startMonth={2} />
-					<ProjectsContainer.Title title={"Test 1"} />
-					<ProjectsContainer.Description
+					<WorksContainer.DevDate startYear={2012} startMonth={2} />
+					<WorksContainer.Title title={"Test 1"} />
+					<WorksContainer.Description
 						description={
 							"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper pharetra sem, eget vulputate nunc aliquam vitae. Duis ac aliquam ligula. Vestibulum scelerisque molestie leo ac porta. Cras bibendum urna."
 						}
 					/>
-					<ProjectsContainer.TechStack techs={[Language.Java]} />
-				</ProjectsContainer.Project>
-				<ProjectsContainer.Project
+					<WorksContainer.TechStack techs={[Language.Java]} />
+				</WorksContainer.Project>
+				<WorksContainer.Project
 					iconText={"2020"}
 					imageSrc={[
 						{
@@ -45,23 +45,23 @@ const Projects = () => {
 					]}
 					position={ProjectPosition.RIGHT}
 				>
-					<ProjectsContainer.DevDate
+					<WorksContainer.DevDate
 						startYear={2020}
 						startMonth={10}
 						finishYear={2021}
 						finishMonth={3}
 					/>
-					<ProjectsContainer.Title title={"Test 2"} />
-					<ProjectsContainer.Description
+					<WorksContainer.Title title={"Test 2"} />
+					<WorksContainer.Description
 						description={
 							"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ultrices libero, ac tempor libero dignissim scelerisque. Sed nec felis vitae purus sollicitudin vulputate vitae quis risus. Mauris consequat, metus id mattis faucibus, tortor lorem tincidunt felis, in maximus quam velit nec arcu. Phasellus sagittis, turpis sit amet condimentum tempus."
 						}
 					/>
-					<ProjectsContainer.TechStack
+					<WorksContainer.TechStack
 						techs={[Language.JavaScript, Tech.React, Tech.TailwindCSS]}
 					/>
-				</ProjectsContainer.Project>
-				<ProjectsContainer.Project
+				</WorksContainer.Project>
+				<WorksContainer.Project
 					iconText={"2022"}
 					imageSrc={[
 						{
@@ -71,17 +71,17 @@ const Projects = () => {
 					]}
 					position={ProjectPosition.LEFT}
 				>
-					<ProjectsContainer.DevDate
+					<WorksContainer.DevDate
 						startYear={2022}
 						startMonth={10}
 						finishYear={2022}
 						finishMonth={12}
 					/>
-					<ProjectsContainer.Title title={"Test 3"} />
-					<ProjectsContainer.Description
+					<WorksContainer.Title title={"Test 3"} />
+					<WorksContainer.Description
 						description={"This is something test..."}
 					/>
-					<ProjectsContainer.TechStack
+					<WorksContainer.TechStack
 						techs={[
 							Language.TypeScript,
 							Tech.React,
@@ -91,10 +91,10 @@ const Projects = () => {
 							Tech.Supabase,
 						]}
 					/>
-				</ProjectsContainer.Project>
-			</ProjectsContainer>
+				</WorksContainer.Project>
+			</WorksContainer>
 		</div>
 	);
 };
 
-export default Projects;
+export default Works;
