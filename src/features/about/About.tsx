@@ -22,8 +22,8 @@ const About = () => {
 				<Image
 					src={"/images/placeholder-icon.webp"}
 					alt={"Selfie"}
-					width={256}
-					height={256}
+					width={250}
+					height={250}
 					priority
 					className={"rounded-full"}
 				/>
