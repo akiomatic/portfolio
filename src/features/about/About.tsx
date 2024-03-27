@@ -14,9 +14,9 @@ const About = () => {
 			<div className={"text-4xl font-bold mb-12"}>About Me</div>
 			<div
 				className={cn(
-					"flex justify-center items-center gap-14",
+					"flex justify-center items-center gap-14 mx-10",
 					"flex-col lg:flex-row",
-					"mx-10",
+					"text-base md:text-lg",
 				)}
 			>
 				<Image
@@ -27,7 +27,7 @@ const About = () => {
 					priority
 					className={"rounded-full"}
 				/>
-				<div className={"flex-1 text-lg space-y-3"}>
+				<div className={"flex-1 space-y-3"}>
 					<Markdown
 						components={{
 							em: ({ node, ...rest }) => {
@@ -40,7 +40,7 @@ const About = () => {
 								return (
 									<h2
 										className={
-											"text-2xl font-semibold [&:not(:first-child)]:pt-6"
+											"text-xl md:text-2xl font-semibold [&:not(:first-child)]:pt-6"
 										}
 										{...rest}
 									/>
