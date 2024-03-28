@@ -33,7 +33,8 @@ const Item = ({ iconData }: IItemProps) => {
 			<Tooltip title={iconData.title}>
 				<div
 					className={cn(
-						"relative mx-2.5",
+						"relative mx-2.5 transition-all",
+						"hover:cursor-pointer hover:scale-125",
 						"w-[30px] md:w-[35px] h-[30px] md:h-[35px]",
 					)}
 				>
@@ -53,7 +54,8 @@ const Item = ({ iconData }: IItemProps) => {
 		<Tooltip title={iconData.title}>
 			<div
 				className={cn(
-					"relative mx-2.5 fill-white",
+					"relative mx-2.5 fill-white transition-all",
+					"hover:cursor-pointer hover:scale-125",
 					"w-[30px] md:w-[35px] h-[30px] md:h-[35px]",
 				)}
 			>
