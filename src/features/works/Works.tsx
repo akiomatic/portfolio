@@ -1,3 +1,4 @@
+import SectionContainer from "@/components/sections/SectionContainer";
 import { Language, Tech } from "@/constants/technologies";
 import WorksContainer, {
 	ProjectPosition,
@@ -6,11 +7,7 @@ import { siFlutter } from "simple-icons";
 
 const Works = () => {
 	return (
-		<div
-			id={"works"}
-			className={"flex flex-col items-center justify-center w-screen py-24"}
-		>
-			<h1 className={"text-4xl font-bold"}>Works</h1>
+		<SectionContainer id={"works"} title={"Works"} className={"w-screen"}>
 			<WorksContainer>
 				<WorksContainer.Project
 					iconText={"2012"}
@@ -93,7 +90,7 @@ const Works = () => {
 					/>
 				</WorksContainer.Project>
 			</WorksContainer>
-		</div>
+		</SectionContainer>
 	);
 };
 

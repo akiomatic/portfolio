@@ -1,3 +1,4 @@
+import SectionContainer from "@/components/sections/SectionContainer";
 import { INTRO_TEXT } from "@/features/about/constants/text-data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -5,13 +6,11 @@ import Markdown from "react-markdown";
 
 const About = () => {
 	return (
-		<div
+		<SectionContainer
 			id={"about"}
-			className={
-				"flex flex-col items-center justify-center w-screen xl:w-[1400px] py-24 scroll-mt-12"
-			}
+			title={"About Me"}
+			className={"w-screen xl:w-[1400px]"}
 		>
-			<div className={"text-4xl font-bold mb-12"}>About Me</div>
 			<div
 				className={cn(
 					"flex justify-center items-center gap-14 mx-10",
@@ -52,7 +51,7 @@ const About = () => {
 					</Markdown>
 				</div>
 			</div>
-		</div>
+		</SectionContainer>
 	);
 };
 
