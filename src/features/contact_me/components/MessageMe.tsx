@@ -17,7 +17,7 @@ import {
 	DrawerTitle,
 	DrawerTrigger,
 } from "@/components/shadcn_ui/drawer";
-import MessageMeForm from "@/features/contact_me/MessageMeForm";
+import MessageMeForm from "@/features/contact_me/components/MessageMeForm";
 import { Breakpoints, useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";

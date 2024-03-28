@@ -1,4 +1,3 @@
-import TurnstileWidget from "@/components/captcha/TurnstileWidget";
 import { Button } from "@/components/shadcn_ui/button";
 import {
 	Form,
@@ -11,6 +10,7 @@ import {
 import { Input } from "@/components/shadcn_ui/input";
 import { Textarea } from "@/components/shadcn_ui/textarea";
 import { useToast } from "@/components/shadcn_ui/use-toast";
+import TurnstileWidget from "@/features/contact_me/components/TurnstileWidget";
 import { sendEmail } from "@/lib/actions";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
