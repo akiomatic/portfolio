@@ -1,8 +1,8 @@
-import { BlockType } from "@/constants/minecraft-blocks";
+import { BlockType } from "@/features/hero/constants/minecraft-blocks";
 import {
 	generateOreVein,
 	generateTree,
-} from "@/utils/terrain-generation-helpers";
+} from "@/features/hero/utils/terrain-generation-helpers";
 
 export const BLOCK_SIZE = 25;
 
