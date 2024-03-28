@@ -1,7 +1,7 @@
 import { Language, Tech } from "@/constants/technologies";
 import WorksContainer, {
 	ProjectPosition,
-} from "@/features/works/WorksContainer";
+} from "@/features/works/components/WorksContainer";
 import { siFlutter } from "simple-icons";
 
 const Works = () => {
