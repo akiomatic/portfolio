@@ -11,7 +11,7 @@ import { Input } from "@/components/shadcn_ui/input";
 import { Textarea } from "@/components/shadcn_ui/textarea";
 import { useToast } from "@/components/shadcn_ui/use-toast";
 import TurnstileWidget from "@/features/contact_me/components/TurnstileWidget";
-import { sendEmail } from "@/lib/actions";
+import { sendEmail } from "@/features/contact_me/lib/actions";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React, { useState, useTransition } from "react";
