@@ -13,7 +13,7 @@ interface ITooltipProps {
 
 const Tooltip = ({ children, title }: ITooltipProps) => {
 	return (
-		<TooltipProvider>
+		<TooltipProvider delayDuration={0}>
 			<TooltipComponent>
 				<TooltipTrigger asChild>{children}</TooltipTrigger>
 				<TooltipContent className={"mb-1 rounded-full"}>
