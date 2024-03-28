@@ -1,4 +1,4 @@
-import Tooltip from "@/components/ui/Tooltip";
+import Tooltip from "@/features/skills/components/Tooltip";
 import React from "react";
 import { SimpleIcon } from "simple-icons";
 
