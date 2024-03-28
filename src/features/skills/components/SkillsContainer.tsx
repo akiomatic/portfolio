@@ -13,8 +13,12 @@ interface ISkillsContainerProps {
 const SkillsContainer = ({ children, title }: ISkillsContainerProps) => {
 	return (
 		<div className={cn("flex items-center gap-y-6", "flex-col md:flex-row")}>
-			<h2 className={"text-xl md:text-2xl font-bold md:w-[175px]"}>{title}</h2>
-			<div className={"grid grid-cols-5 gap-y-6 sm:flex"}>{children}</div>
+			<h2 className={cn("font-bold", "text-xl md:text-2xl md:w-[175px]")}>
+				{title}
+			</h2>
+			<div className={cn("gap-y-6 grid-cols-5", "grid sm:flex")}>
+				{children}
+			</div>
 		</div>
 	);
 };
