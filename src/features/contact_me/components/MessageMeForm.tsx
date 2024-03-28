@@ -1,5 +1,4 @@
-import TurnstileWidget from "@/components/captcha/TurnstileWidget";
-import { Button } from "@/components/shadcn_ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Form,
 	FormControl,
@@ -7,11 +6,12 @@ import {
 	FormItem,
 	FormLabel,
 	FormMessage,
-} from "@/components/shadcn_ui/form";
-import { Input } from "@/components/shadcn_ui/input";
-import { Textarea } from "@/components/shadcn_ui/textarea";
-import { useToast } from "@/components/shadcn_ui/use-toast";
-import { sendEmail } from "@/lib/actions";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
+import TurnstileWidget from "@/features/contact_me/components/TurnstileWidget";
+import { sendEmail } from "@/features/contact_me/lib/actions";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React, { useState, useTransition } from "react";

@@ -1,10 +1,16 @@
 "use client";
 
-import { BlockType, ORE_PIECES } from "@/constants/minecraft-blocks";
+import {
+	BlockType,
+	ORE_PIECES,
+} from "@/features/hero/constants/minecraft-blocks";
+import {
+	BLOCK_SIZE,
+	generateTerrain,
+} from "@/features/hero/utils/terrain-generation";
+import { getColorForBlock } from "@/features/hero/utils/terrain-generation-helpers";
 import useDeviceSize from "@/hooks/use-device-size";
 import { cn } from "@/lib/utils";
-import { BLOCK_SIZE, generateTerrain } from "@/utils/terrain-generation";
-import { getColorForBlock } from "@/utils/terrain-generation-helpers";
 import { useAnimate } from "framer-motion";
 import { useEffect, useRef } from "react";
 

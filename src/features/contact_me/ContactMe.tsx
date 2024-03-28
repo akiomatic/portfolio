@@ -1,4 +1,4 @@
-import MessageMe from "@/components/contact_me/MessageMe";
+import MessageMe from "@/features/contact_me/components/MessageMe";
 import { SVGIcon } from "@/lib/helpers";
 import React from "react";
 import {

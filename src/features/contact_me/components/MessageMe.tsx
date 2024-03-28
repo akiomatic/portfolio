@@ -1,7 +1,6 @@
 "use client";
 
-import MessageMeForm from "@/components/contact_me/MessageMeForm";
-import { Button } from "@/components/shadcn_ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
@@ -9,7 +8,7 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/components/shadcn_ui/dialog";
+} from "@/components/ui/dialog";
 import {
 	Drawer,
 	DrawerContent,
@@ -17,7 +16,8 @@ import {
 	DrawerHeader,
 	DrawerTitle,
 	DrawerTrigger,
-} from "@/components/shadcn_ui/drawer";
+} from "@/components/ui/drawer";
+import MessageMeForm from "@/features/contact_me/components/MessageMeForm";
 import { Breakpoints, useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";

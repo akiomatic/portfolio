@@ -1,5 +1,5 @@
-import { BlockType } from "@/constants/minecraft-blocks";
-import { tree } from "@/constants/minecraft-trees";
+import { BlockType } from "@/features/hero/constants/minecraft-blocks";
+import { tree } from "@/features/hero/constants/minecraft-trees";
 
 export const getColorForBlock = (blockType: BlockType): string => {
 	switch (blockType) {

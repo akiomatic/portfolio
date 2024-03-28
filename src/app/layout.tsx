@@ -1,4 +1,4 @@
-import { Toaster } from "@/components/shadcn_ui/toaster";
+import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
