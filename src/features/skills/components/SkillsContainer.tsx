@@ -1,9 +1,11 @@
 import Tooltip from "@/features/skills/components/Tooltip";
-import React from "react";
+import { Skill } from "@/features/skills/constants/skills-data";
+import Image from "next/image";
+import { ReactNode } from "react";
 import { SimpleIcon } from "simple-icons";
 
 interface ISkillsContainerProps {
-	children: React.ReactNode;
+	children: ReactNode;
 	title: string;
 }
 
@@ -16,14 +18,34 @@ const SkillsContainer = ({ children, title }: ISkillsContainerProps) => {
 	);
 };
 
-interface IItemWithSimpleIconProps {
-	iconData: SimpleIcon;
+interface IItemProps {
+	iconData: SimpleIcon | Skill;
 }
 
-const ItemWithSimpleIcon = ({ iconData }: IItemWithSimpleIconProps) => {
+const isSkill = (iconData: SimpleIcon | Skill): iconData is Skill => {
+	return !("path" in iconData);
+};
+
+const Item = ({ iconData }: IItemProps) => {
+	if (isSkill(iconData)) {
+		return (
+			<Tooltip title={iconData.title}>
+				<div className={"w-[40px] h-[40px] mx-2.5"}>
+					<Image
+						src={iconData.url}
+						alt={iconData.title}
+						className={"object-contain"}
+						width={40}
+						height={40}
+					/>
+				</div>
+			</Tooltip>
+		);
+	}
+
 	return (
 		<Tooltip title={iconData.title}>
-			<div className={"w-[40px] h-[40px] fill-[#E5ECF0] mx-2.5"}>
+			<div className={"w-[40px] h-[40px] fill-white mx-2.5"}>
 				<svg
 					role={"img"}
 					viewBox={"0 0 24 24"}
@@ -36,22 +58,6 @@ const ItemWithSimpleIcon = ({ iconData }: IItemWithSimpleIconProps) => {
 	);
 };
 
-interface IItemWithSVG {
-	children: React.ReactNode;
-	title: string;
-}
-
-const ItemWithSVG = ({ children, title }: IItemWithSVG) => {
-	return (
-		<Tooltip title={title}>
-			<div className={"w-[40px] h-[40px] fill-[#E5ECF0] mx-2.5"}>
-				{children}
-			</div>
-		</Tooltip>
-	);
-};
-
-SkillsContainer.Item = ItemWithSimpleIcon;
-SkillsContainer.ItemSVG = ItemWithSVG;
+SkillsContainer.Item = Item;
 
 export default SkillsContainer;
