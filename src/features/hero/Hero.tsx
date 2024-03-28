@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/shadcn_ui/button";
+import { Button } from "@/components/ui/button";
 import { Terrain } from "@/features/hero/components/Terrain";
 import { SVGIcon } from "@/lib/helpers";
 import { cn } from "@/lib/utils";
