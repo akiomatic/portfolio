@@ -1,3 +1,4 @@
+import SectionContainer from "@/components/sections/SectionContainer";
 import MessageMe from "@/features/contact_me/components/MessageMe";
 import { SVGIcon } from "@/lib/helpers";
 import React from "react";
@@ -28,15 +29,13 @@ const socials: Array<ISocial> = [
 
 const ContactMe = () => {
 	return (
-		<div
+		<SectionContainer
 			id={"contact-me"}
-			className={
-				"flex flex-col items-center justify-center w-4/5 lg:w-1/2 py-24"
-			}
+			title={"Let's Connect!"}
+			className={"w-4/5 lg:w-1/2"}
 		>
-			<h1 className={"text-4xl font-bold"}>Let's Connect!</h1>
 			{/*<div className={"flex flex-col justify-center items-center mt-12 bg-white backdrop-filter backdrop-blur-md w-3/4 lg:w-2/3 h-full rounded-full bg-opacity-20 border border-white border-opacity-20"}>*/}
-			<p className={"text-lg text-center mt-12 px-12"}>
+			<p className={"text-lg text-center px-12"}>
 				Thank you for exploring my portfolio. If I've caught your interest, feel
 				free to connect on social media! I'm open to new opportunities and
 				collaborations.
@@ -80,7 +79,7 @@ const ContactMe = () => {
 			<p className={"text-lg text-center"}>
 				I'm looking forward to connecting with you!
 			</p>
-		</div>
+		</SectionContainer>
 	);
 };
 

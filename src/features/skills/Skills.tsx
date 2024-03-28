@@ -1,3 +1,4 @@
+import SectionContainer from "@/components/sections/SectionContainer";
 import SkillsContainer from "@/features/skills/components/SkillsContainer";
 import { JavaIcon } from "@/utils/icons";
 import React from "react";
@@ -33,12 +34,8 @@ import {
 
 const Skills = () => {
 	return (
-		<div
-			id={"skills"}
-			className={"flex flex-col items-center justify-center w-screen py-24"}
-		>
-			<h1 className={"text-4xl font-bold"}>Skills</h1>
-			<div className={"flex flex-col gap-y-10 mt-12"}>
+		<SectionContainer id={"skills"} title={"Skills"} className={"w-screen"}>
+			<div className={"flex flex-col gap-y-10"}>
 				<SkillsContainer title={"Languages"}>
 					<SkillsContainer.ItemSVG title={"Java"}>
 						<JavaIcon />
@@ -78,7 +75,7 @@ const Skills = () => {
 					<SkillsContainer.Item iconData={siWebstorm} />
 				</SkillsContainer>
 			</div>
-		</div>
+		</SectionContainer>
 	);
 };
 

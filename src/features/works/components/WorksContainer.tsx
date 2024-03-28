@@ -9,7 +9,7 @@ interface IProjectsContainerProps {
 
 const WorksContainer = ({ children }: IProjectsContainerProps) => {
 	return (
-		<div className={"flex flex-col items-center justify-center my-12"}>
+		<div className={"flex flex-col items-center justify-center"}>
 			{children}
 		</div>
 	);
