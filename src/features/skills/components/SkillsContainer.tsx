@@ -12,7 +12,7 @@ interface ISkillsContainerProps {
 const SkillsContainer = ({ children, title }: ISkillsContainerProps) => {
 	return (
 		<div className={"flex items-center"}>
-			<h1 className={"text-3xl font-bold w-[200px]"}>{title}</h1>
+			<h2 className={"text-2xl font-bold md:w-[175px]"}>{title}</h2>
 			<div className={"flex"}>{children}</div>
 		</div>
 	);
@@ -30,13 +30,13 @@ const Item = ({ iconData }: IItemProps) => {
 	if (isSkill(iconData)) {
 		return (
 			<Tooltip title={iconData.title}>
-				<div className={"w-[40px] h-[40px] mx-2.5"}>
+				<div className={"mx-2.5"}>
 					<Image
 						src={iconData.url}
 						alt={iconData.title}
 						className={"object-contain"}
-						width={40}
-						height={40}
+						width={35}
+						height={35}
 					/>
 				</div>
 			</Tooltip>
@@ -45,7 +45,7 @@ const Item = ({ iconData }: IItemProps) => {
 
 	return (
 		<Tooltip title={iconData.title}>
-			<div className={"w-[40px] h-[40px] fill-white mx-2.5"}>
+			<div className={"w-[35px] h-[35px] fill-white mx-2.5"}>
 				<svg
 					role={"img"}
 					viewBox={"0 0 24 24"}
