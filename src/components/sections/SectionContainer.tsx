@@ -22,7 +22,7 @@ const SectionContainer = ({
 				className,
 			)}
 		>
-			<h1 className={"text-4xl font-bold mb-12"}>{title}</h1>
+			<h1 className={cn("font-bold mb-12", "text-3xl md:text-4xl")}>{title}</h1>
 			{children}
 		</div>
 	);
