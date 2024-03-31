@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
@@ -19,24 +18,15 @@ import {
 } from "@/components/ui/drawer";
 import MessageMeForm from "@/features/contact_me/components/MessageMeForm";
 import { Breakpoints, useMediaQuery } from "@/hooks/use-media-query";
-import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
 interface IMessageMeProps {
 	children?: React.ReactNode;
-	className?: string;
-	buttonText: string;
 	title: string;
 	description: string;
 }
 
-const MessageMe = ({
-	children,
-	className,
-	buttonText,
-	title,
-	description,
-}: IMessageMeProps) => {
+const MessageMe = ({ children, title, description }: IMessageMeProps) => {
 	const [open, setOpen] = useState(false);
 	const [isJavaScriptEnabled, setIsJavaScriptEnabled] = useState(false);
 	const isDesktop = useMediaQuery(Breakpoints.md);
@@ -50,17 +40,8 @@ const MessageMe = ({
 	if (isDesktop) {
 		return (
 			<>
-				{children}
 				<Dialog open={open} onOpenChange={setOpen}>
-					<DialogTrigger asChild>
-						<Button
-							variant={"outline"}
-							size={"default"}
-							className={cn("text-base", className)}
-						>
-							{buttonText}
-						</Button>
-					</DialogTrigger>
+					<DialogTrigger asChild>{children}</DialogTrigger>
 					<DialogContent
 						className={
 							"max-w-[50%] flex flex-col justify-center items-center py-12"
@@ -86,17 +67,8 @@ const MessageMe = ({
 
 	return (
 		<>
-			{children}
 			<Drawer open={open} onOpenChange={setOpen}>
-				<DrawerTrigger asChild>
-					<Button
-						variant={"outline"}
-						size={"default"}
-						className={cn("text-base", className)}
-					>
-						{buttonText}
-					</Button>
-				</DrawerTrigger>
+				<DrawerTrigger asChild>{children}</DrawerTrigger>
 				<DrawerContent>
 					<DrawerHeader className="text-center pt-12">
 						<DrawerTitle className={"text-2xl"}>{title}</DrawerTitle>
