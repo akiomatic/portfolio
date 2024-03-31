@@ -9,7 +9,7 @@ const About = () => {
 		<SectionContainer
 			id={"about"}
 			title={"About Me"}
-			className={"w-screen xl:w-[1400px]"}
+			className={"w-screen max-w-[1400px]"}
 		>
 			<div
 				className={cn(
