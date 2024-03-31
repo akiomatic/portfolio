@@ -132,7 +132,8 @@ const WorkCard = ({ work }: IWorkCardProps) => {
 	return (
 		<div
 			className={cn(
-				"rounded-lg p-8 grid grid-rows-3 w-[325px] h-[525px] text-white backdrop-blur-lg shadow-[20px_20px_40px_-12px_rgba(0,0,0,0.3)] bg-gray-50/10 border-gray-500/40",
+				"rounded-lg p-8 grid grid-rows-3 w-[325px] h-[525px] text-white backdrop-blur-lg shadow-[20px_20px_40px_-12px_rgba(0,0,0,0.3)] bg-gray-50/10 border-gray-500/40 transition-all duration-300",
+				"hover:scale-105",
 			)}
 		>
 			<ImageSection image={image} team={team} />
