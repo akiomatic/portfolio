@@ -7,7 +7,7 @@ import Works from "@/features/works/Works";
 
 export default function Home() {
 	return (
-		<div className={"flex flex-col items-center text-[#fff] bg-[#0B1215]"}>
+		<div className={"flex flex-col items-center text-[#fff] bg-[#252525]"}>
 			<Navbar />
 			<Hero />
 			<About />
