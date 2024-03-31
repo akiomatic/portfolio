@@ -1,84 +1,66 @@
 import SVGIcon from "@/components/icons/SVGIcon";
 import SectionContainer from "@/components/sections/SectionContainer";
+import { Button } from "@/components/ui/button";
 import MessageMe from "@/features/contact_me/components/MessageMe";
+import { SOCIALS_LIST } from "@/features/contact_me/constants/SOCIALS_LIST";
+import { ISocial } from "@/features/contact_me/utils/types";
+import { cn } from "@/lib/utils";
+import { EnvelopeOpenIcon, Pencil1Icon } from "@radix-ui/react-icons";
+import Link from "next/link";
 import React from "react";
-import {
-	SimpleIcon,
-	siDevdotto,
-	siGithub,
-	siLinkedin,
-	siX,
-} from "simple-icons";
 
-interface ISocial {
-	name: string;
-	link: string;
-	icon: SimpleIcon;
-}
+const SocialButton = ({ social }: { social: ISocial }) => (
+	<Button variant={"secondary"} size={"icon"}>
+		<Link href={social.link} target={"_blank"} rel={"noopener noreferrer"}>
+			<SVGIcon icon={social.icon} className={"w-5 h-5"} />
+		</Link>
+	</Button>
+);
 
-const socials: Array<ISocial> = [
-	{
-		name: "LinkedIn",
-		link: "https://www.linkedin.com/in/akiomatic/",
-		icon: siLinkedin,
-	},
-	{ name: "GitHub", link: "https://github.com/akiomatic", icon: siGithub },
-	{ name: "X", link: "https://twitter.com/akiomatic", icon: siX },
-	{ name: "Dev.to", link: "https://dev.to/akiomatic", icon: siDevdotto },
-];
+const DirectInquiryButton = () => (
+	<Button variant={"secondary"} size={"icon"} className={"ml-2"}>
+		<a href={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL_ADDRESS}`}>
+			<EnvelopeOpenIcon className={"w-5 h-5"} />
+		</a>
+	</Button>
+);
 
 const ContactMe = () => {
 	return (
 		<SectionContainer
 			id={"contact-me"}
 			title={"Let's Connect!"}
-			className={"w-4/5 lg:w-1/2"}
+			className={cn("px-12", "w-screen lg:w-[1000px]", "text-base md:text-lg")}
 		>
-			{/*<div className={"flex flex-col justify-center items-center mt-12 bg-white backdrop-filter backdrop-blur-md w-3/4 lg:w-2/3 h-full rounded-full bg-opacity-20 border border-white border-opacity-20"}>*/}
-			<p className={"text-lg text-center px-12"}>
+			<p className={"text-center"}>
 				Thank you for exploring my portfolio. If I've caught your interest, feel
 				free to connect on social media! I'm open to new opportunities and
 				collaborations.
 			</p>
-			<div className={"flex pt-8 gap-x-8"}>
-				{socials.map((social) => {
-					return (
-						<a
-							key={social.name}
-							href={social.link}
-							target={"_blank"}
-							rel={"noopener noreferrer"}
-							className={
-								"flex items-center justify-center w-[30px] h-[30px] fill-[#E5ECF0]"
-							}
-						>
-							<SVGIcon icon={social.icon} />
-						</a>
-					);
-				})}
+			<div className={"flex py-8 gap-x-8"}>
+				{SOCIALS_LIST.map((social) => (
+					<SocialButton key={social.name} social={social} />
+				))}
 			</div>
-			<p className={"text-lg text-center mt-12"}>
-				To get in touch via email, contact me directly at:{" "}
-				<a href={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL_ADDRESS}`}>
-					<code className={"text-base px-2 py-0.5 border rounded-md"}>
-						{process.env.NEXT_PUBLIC_MY_EMAIL_ADDRESS}
-					</code>
-				</a>
-				.
+			<p className={"flex justify-center items-center text-center"}>
+				For direct inquiries:
+				<DirectInquiryButton />
 			</p>
 			<MessageMe
-				className={"mb-8"}
-				buttonText={"Send me a message here 👋"}
 				title={"Contact Me"}
 				description={
 					"Thank you again for exploring my portfolio. If there's anything you'd like to discuss, share, or ask, feel free to message me there! I'm looking forward to connecting with you!"
 				}
 			>
-				<p className={"text-sm my-2"}>or</p>
+				<Button
+					variant={"outline"}
+					size={"default"}
+					className={cn("font-semibold mt-2", "md:text-base")}
+				>
+					Or send a direct message
+					<Pencil1Icon className={"w-5 h-5 ml-2"} />
+				</Button>
 			</MessageMe>
-			<p className={"text-lg text-center"}>
-				I'm looking forward to connecting with you!
-			</p>
 		</SectionContainer>
 	);
 };
