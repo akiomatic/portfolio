@@ -106,7 +106,7 @@ const ActionLinks = ({ id, github, website, video }: IActionLinksProps) => (
 			)}
 		</div>
 		<Button variant={"secondary"} asChild>
-			<p>Details</p>
+			<p>Learn more</p>
 		</Button>
 	</div>
 );
