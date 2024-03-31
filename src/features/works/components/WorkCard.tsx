@@ -56,7 +56,7 @@ interface IOverviewProps {
 const Overview = ({ date, title, overview }: IOverviewProps) => (
 	<>
 		<p className="text-sm mt-4">{date}</p>
-		<h3 className="text-xl font-semibold">{title}</h3>
+		<h2 className="text-xl font-semibold">{title}</h2>
 		<div className="flex-1 text-white mt-2 overflow-hidden">
 			<Markdown
 				components={{
