@@ -1,8 +1,8 @@
 "use client";
 
+import SVGIcon from "@/components/icons/SVGIcon";
 import { Button } from "@/components/ui/button";
 import { Terrain } from "@/features/hero/components/Terrain";
-import { SVGIcon } from "@/lib/helpers";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";

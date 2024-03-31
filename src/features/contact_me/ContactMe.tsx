@@ -1,6 +1,6 @@
+import SVGIcon from "@/components/icons/SVGIcon";
 import SectionContainer from "@/components/sections/SectionContainer";
 import MessageMe from "@/features/contact_me/components/MessageMe";
-import { SVGIcon } from "@/lib/helpers";
 import React from "react";
 import {
 	SimpleIcon,
