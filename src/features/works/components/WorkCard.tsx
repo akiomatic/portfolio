@@ -84,21 +84,21 @@ const ActionLinks = ({ id, github, website, video }: IActionLinksProps) => (
 	<div className="flex justify-between items-center mt-4">
 		<div className="flex gap-x-2">
 			{github && (
-				<Button size={"icon"} asChild>
+				<Button variant={"secondary"} size={"icon"} asChild>
 					<Link href={github} target="_blank" rel="noopener noreferrer">
 						<GitHubLogoIcon className="w-5 h-5" />
 					</Link>
 				</Button>
 			)}
 			{website && (
-				<Button size={"icon"} asChild>
+				<Button variant={"secondary"} size={"icon"} asChild>
 					<Link href={website} target="_blank" rel="noopener noreferrer">
 						<ExternalLinkIcon className="w-5 h-5" />
 					</Link>
 				</Button>
 			)}
 			{video && (
-				<Button size={"icon"} asChild>
+				<Button variant={"secondary"} size={"icon"} asChild>
 					<Link href={video} target="_blank" rel="noopener noreferrer">
 						<VideoIcon className="w-5 h-5" />
 					</Link>
@@ -106,7 +106,7 @@ const ActionLinks = ({ id, github, website, video }: IActionLinksProps) => (
 			)}
 		</div>
 		<Button variant={"secondary"} asChild>
-			<p>More details</p>
+			<p>Details</p>
 		</Button>
 	</div>
 );
