@@ -13,7 +13,7 @@ const About = () => {
 		>
 			<div
 				className={cn(
-					"flex justify-center items-center gap-14 mx-10",
+					"flex justify-center items-center gap-14 px-12",
 					"flex-col lg:flex-row",
 					"text-base md:text-lg",
 				)}
