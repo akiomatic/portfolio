@@ -1,13 +1,15 @@
 "use client";
 
-import SVGIcon from "@/components/icons/SVGIcon";
 import { Button } from "@/components/ui/button";
 import { Terrain } from "@/features/hero/components/Terrain";
 import { cn } from "@/lib/utils";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import {
+	ArrowRightIcon,
+	GitHubLogoIcon,
+	LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
 import Link from "next/link";
-import React, { useState } from "react";
-import { siGithub, siLinkedin } from "simple-icons";
+import { useState } from "react";
 
 const Hero = () => {
 	const [isNight, setIsNight] = useState(true);
@@ -83,32 +85,22 @@ const Hero = () => {
 									<ArrowRightIcon className={"ml-2"} />
 								</Link>
 							</Button>
-							<Button
-								variant={"secondary"}
-								size={"icon"}
-								className={"rounded-full flex items-center justify-center"}
-							>
+							<Button variant={"secondary"} size={"icon"} asChild>
 								<Link
 									href={"https://www.linkedin.com/in/akiomatic/"}
-									className={"w-full h-full p-2.5"}
-									target={"_blank"}
-									rel={"noopener noreferrer"}
+									target="_blank"
+									rel="noopener noreferrer"
 								>
-									<SVGIcon icon={siLinkedin} />
+									<LinkedInLogoIcon className="w-5 h-5" />
 								</Link>
 							</Button>
-							<Button
-								variant={"secondary"}
-								size={"icon"}
-								className={"rounded-full flex items-center justify-center"}
-							>
+							<Button variant={"secondary"} size={"icon"} asChild>
 								<Link
 									href={"https://www.github.com/akiomatic"}
-									className={"w-full h-full p-2.5"}
-									target={"_blank"}
-									rel={"noopener noreferrer"}
+									target="_blank"
+									rel="noopener noreferrer"
 								>
-									<SVGIcon icon={siGithub} />
+									<GitHubLogoIcon className="w-5 h-5" />
 								</Link>
 							</Button>
 						</div>
