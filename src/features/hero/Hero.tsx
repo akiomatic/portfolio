@@ -8,16 +8,16 @@ import {
 	GitHubLogoIcon,
 	LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
+import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useState } from "react";
 
 const Hero = () => {
-	const [isNight, setIsNight] = useState(true);
+	const { theme } = useTheme();
 	return (
 		<div
 			className={cn(
 				"relative h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16",
-				!isNight
+				theme !== "dark"
 					? "from-[#90dffe] to-[#38a3d1]"
 					: "from-[#202020] to-[#111119]",
 			)}
@@ -27,7 +27,7 @@ const Hero = () => {
 					"before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-20 before:backdrop-blur"
 				}
 			>
-				<Terrain isNight={isNight} />
+				<Terrain isNight={theme === "dark"} />
 			</div>
 			<div
 				className={cn(
@@ -75,17 +75,13 @@ const Hero = () => {
 								"flex justify-center items-center gap-x-6 mt-8 tracking-tight"
 							}
 						>
-							<Button
-								variant={"secondary"}
-								className={"text-base rounded-full"}
-								asChild
-							>
+							<Button className={"text-base rounded-full"} asChild>
 								<Link href={"#contact-me"} className={"flex"}>
 									<p>Contact me here</p>
 									<ArrowRightIcon className={"ml-2"} />
 								</Link>
 							</Button>
-							<Button variant={"secondary"} size={"icon"} asChild>
+							<Button size={"icon"} asChild>
 								<Link
 									href={"https://www.linkedin.com/in/akiomatic/"}
 									target="_blank"
@@ -94,7 +90,7 @@ const Hero = () => {
 									<LinkedInLogoIcon className="w-5 h-5" />
 								</Link>
 							</Button>
-							<Button variant={"secondary"} size={"icon"} asChild>
+							<Button size={"icon"} asChild>
 								<Link
 									href={"https://www.github.com/akiomatic"}
 									target="_blank"
