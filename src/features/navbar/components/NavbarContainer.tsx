@@ -13,6 +13,7 @@ const NavbarContainer = ({ children }: INavbarContainerProps) => {
 				"w-full min-[380px]:w-11/12 lg:w-3/4 xl:w-2/3",
 				"px-5 md:px-6",
 				"justify-center sm:justify-between",
+				"text-sm sm:text-base",
 			)}
 		>
 			{children}
