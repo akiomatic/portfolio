@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/components/themes/theme-provider";
+import { ThemeProvider } from "@/components/themes/ThemeProvider";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
