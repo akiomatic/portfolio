@@ -8,7 +8,11 @@ interface INavbarItemsProps {
 }
 
 const NavbarItems = ({ children }: INavbarItemsProps) => {
-	return <div className={"flex sm:space-x-4"}>{children}</div>;
+	return (
+		<div className={"flex justify-center items-center sm:space-x-3"}>
+			{children}
+		</div>
+	);
 };
 
 interface INavbarItemProps {
@@ -19,9 +23,10 @@ const NavbarItem = ({ section }: INavbarItemProps) => {
 	return (
 		<div
 			className={cn(
-				"h-full py-1 px-4 rounded-full transition-all",
+				"h-full py-1 rounded-full transition-all",
 				"hover:bg-white hover:bg-opacity-20 sm:hover:bg-opacity-30",
 				"sm:bg-white sm:bg-opacity-20",
+				"px-4",
 			)}
 		>
 			<Link href={`#${section.targetId}`}>
