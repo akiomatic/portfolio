@@ -30,10 +30,20 @@ const About = () => {
 					<Markdown
 						components={{
 							em: ({ node, ...rest }) => {
-								return <em className={"not-italic text-amber-300"} {...rest} />;
+								return (
+									<em
+										className={"not-italic text-violet-900 dark:text-amber-300"}
+										{...rest}
+									/>
+								);
 							},
 							strong: ({ node, ...rest }) => {
-								return <strong className={"text-lime-300"} {...rest} />;
+								return (
+									<strong
+										className={"text-purple-700 dark:text-lime-300"}
+										{...rest}
+									/>
+								);
 							},
 							h2: ({ node, ...rest }) => {
 								return (

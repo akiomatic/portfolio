@@ -10,15 +10,18 @@ import Link from "next/link";
 import React from "react";
 
 const SocialButton = ({ social }: { social: ISocial }) => (
-	<Button variant={"secondary"} size={"icon"}>
+	<Button size={"icon"}>
 		<Link href={social.link} target={"_blank"} rel={"noopener noreferrer"}>
-			<SVGIcon icon={social.icon} className={"w-5 h-5"} />
+			<SVGIcon
+				icon={social.icon}
+				className={"w-5 h-5 fill-white dark:fill-black"}
+			/>
 		</Link>
 	</Button>
 );
 
 const DirectInquiryButton = () => (
-	<Button variant={"secondary"} size={"icon"} className={"ml-2"}>
+	<Button size={"icon"} className={"ml-2"}>
 		<a href={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL_ADDRESS}`}>
 			<EnvelopeOpenIcon className={"w-5 h-5"} />
 		</a>
@@ -52,11 +55,7 @@ const ContactMe = () => {
 					"Thank you again for exploring my portfolio. If there's anything you'd like to discuss, share, or ask, feel free to message me there! I'm looking forward to connecting with you!"
 				}
 			>
-				<Button
-					variant={"outline"}
-					size={"default"}
-					className={cn("font-semibold mt-2", "md:text-base")}
-				>
+				<Button className={cn("font-semibold mt-2", "md:text-base")}>
 					Or send a direct message
 					<Pencil1Icon className={"w-5 h-5 ml-2"} />
 				</Button>

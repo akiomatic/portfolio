@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Terrain } from "@/features/hero/components/Terrain";
 import { cn } from "@/lib/utils";
@@ -9,25 +7,20 @@ import {
 	LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { useState } from "react";
 
 const Hero = () => {
-	const [isNight, setIsNight] = useState(true);
 	return (
 		<div
 			className={cn(
-				"h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16",
-				!isNight
-					? "from-[#90dffe] to-[#38a3d1]"
-					: "from-[#202020] to-[#111119]",
+				"relative h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16 from-[#C4F9FF] to-[#6DD2FE] dark:from-[#202020] dark:to-[#111119]",
 			)}
 		>
 			<div
 				className={
-					"before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-20 before:backdrop-blur"
+					"before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-20 before:backdrop-blur-md before:bg-white/50 before:dark:bg-transparent"
 				}
 			>
-				<Terrain isNight={isNight} />
+				<Terrain />
 			</div>
 			<div
 				className={cn(
@@ -37,9 +30,10 @@ const Hero = () => {
 			>
 				<div className={"flex flex-col justify-center items-center"}>
 					<div
-						className={
-							"flex flex-col justify-center items-start bg-gradient-to-br bg-clip-text from-amber-400 via-lime-300 to-emerald-300 gap-y-2"
-						}
+						className={cn(
+							"flex flex-col justify-center items-start bg-gradient-to-br bg-clip-text from-purple-500 via-violet-900 to-sky-700 dark:from-amber-400 dark:via-lime-300 dark:to-emerald-300 gap-y-2",
+							"bg-red-400",
+						)}
 					>
 						<h1
 							className={cn(
@@ -53,6 +47,7 @@ const Hero = () => {
 							className={cn(
 								"font-semibold mt-4 tracking-tighter",
 								"text-xl min-[730px]:text-2xl lg:text-3xl",
+								"text-[#333] dark:text-white",
 							)}
 						>
 							I am a{" "}
@@ -75,17 +70,13 @@ const Hero = () => {
 								"flex justify-center items-center gap-x-6 mt-8 tracking-tight"
 							}
 						>
-							<Button
-								variant={"secondary"}
-								className={"text-base rounded-full"}
-								asChild
-							>
+							<Button className={"text-base rounded-full"} asChild>
 								<Link href={"#contact-me"} className={"flex"}>
 									<p>Contact me here</p>
 									<ArrowRightIcon className={"ml-2"} />
 								</Link>
 							</Button>
-							<Button variant={"secondary"} size={"icon"} asChild>
+							<Button size={"icon"} asChild>
 								<Link
 									href={"https://www.linkedin.com/in/akiomatic/"}
 									target="_blank"
@@ -94,7 +85,7 @@ const Hero = () => {
 									<LinkedInLogoIcon className="w-5 h-5" />
 								</Link>
 							</Button>
-							<Button variant={"secondary"} size={"icon"} asChild>
+							<Button size={"icon"} asChild>
 								<Link
 									href={"https://www.github.com/akiomatic"}
 									target="_blank"

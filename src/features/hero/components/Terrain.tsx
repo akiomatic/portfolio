@@ -73,11 +73,7 @@ const drawOre = (
 	}
 };
 
-interface ITerrainSection {
-	isNight: boolean;
-}
-
-export const Terrain = ({ isNight }: ITerrainSection) => {
+export const Terrain = () => {
 	const ref = useRef<HTMLCanvasElement>(null);
 	const [width, height] = useDeviceSize();
 	const [scope, animate] = useAnimate();
@@ -117,8 +113,7 @@ export const Terrain = ({ isNight }: ITerrainSection) => {
 					width={width}
 					height={height}
 					className={cn(
-						"transition-all duration-500 w-full h-full after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-pink-300",
-						isNight ? "brightness-50" : "brightness-90",
+						"transition-all duration-500 w-full h-full brightness-[1.4] dark:brightness-[.4]",
 					)}
 				/>
 			)}

@@ -7,7 +7,11 @@ import Works from "@/features/works/Works";
 
 export default function Home() {
 	return (
-		<div className={"flex flex-col items-center text-[#fff] bg-[#252525]"}>
+		<div
+			className={
+				"flex flex-col items-center text-black dark:text-white bg-[#C4C4C4] dark:bg-[#272727]"
+			}
+		>
 			<Navbar />
 			<Hero />
 			<About />

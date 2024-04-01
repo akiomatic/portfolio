@@ -1,5 +1,6 @@
 import NavbarContainer from "@/features/navbar/components/NavbarContainer";
 import NavbarItems from "@/features/navbar/components/NavbarItems";
+import { ThemeToggle } from "@/features/navbar/components/ThemeToggle";
 import Link from "next/link";
 
 export interface ISection {
@@ -31,6 +32,7 @@ const Navbar = () => {
 							<NavbarItems.Item key={section.targetId} section={section} />
 						);
 					})}
+					<ThemeToggle />
 				</NavbarItems>
 			</NavbarContainer>
 		</nav>
