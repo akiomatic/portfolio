@@ -113,7 +113,7 @@ export const Terrain = () => {
 					width={width}
 					height={height}
 					className={cn(
-						"transition-all duration-500 w-full h-full after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-pink-300 brightness-90 dark:brightness-50",
+						"transition-all duration-500 w-full h-full brightness-[1.4] dark:brightness-[.4]",
 					)}
 				/>
 			)}

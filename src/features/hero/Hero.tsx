@@ -12,12 +12,12 @@ const Hero = () => {
 	return (
 		<div
 			className={cn(
-				"relative h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16 from-[#90dffe] to-[#38a3d1] dark:from-[#202020] dark:to-[#111119]",
+				"relative h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16 from-[#C4F9FF] to-[#6DD2FE] dark:from-[#202020] dark:to-[#111119]",
 			)}
 		>
 			<div
 				className={
-					"before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-20 before:backdrop-blur"
+					"before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-20 before:backdrop-blur-md before:bg-white/50 before:dark:bg-transparent"
 				}
 			>
 				<Terrain />
@@ -30,9 +30,10 @@ const Hero = () => {
 			>
 				<div className={"flex flex-col justify-center items-center"}>
 					<div
-						className={
-							"flex flex-col justify-center items-start bg-gradient-to-br bg-clip-text from-amber-400 via-lime-300 to-emerald-300 gap-y-2"
-						}
+						className={cn(
+							"flex flex-col justify-center items-start bg-gradient-to-br bg-clip-text from-purple-500 via-violet-900 to-sky-700 dark:from-amber-400 dark:via-lime-300 dark:to-emerald-300 gap-y-2",
+							"bg-red-400",
+						)}
 					>
 						<h1
 							className={cn(
@@ -46,6 +47,7 @@ const Hero = () => {
 							className={cn(
 								"font-semibold mt-4 tracking-tighter",
 								"text-xl min-[730px]:text-2xl lg:text-3xl",
+								"text-[#333] dark:text-white",
 							)}
 						>
 							I am a{" "}

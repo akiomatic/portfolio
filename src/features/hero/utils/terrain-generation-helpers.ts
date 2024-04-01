@@ -14,7 +14,7 @@ export const getColorForBlock = (blockType: BlockType): string => {
 		case BlockType.WOOD:
 			return "#7c9e56";
 		case BlockType.BEDROCK:
-			return "#4a4a4a";
+			return "#616161";
 		case BlockType.COAL_ORE:
 			return "hsl(0, 0%, 10%)";
 		case BlockType.IRON_ORE:
