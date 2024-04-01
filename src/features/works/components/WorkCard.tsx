@@ -29,7 +29,7 @@ const ImageSection = ({ image, team }: IImageSectionProps) => (
 			className="object-cover rounded-lg"
 		/>
 		{team && (
-			<p className="absolute top-3 right-3 rounded-full bg-black/70 text-sm px-3 py-1">
+			<p className="absolute top-3 right-3 rounded-full bg-gray-200/70 dark:bg-black/70 text-sm px-3 py-1">
 				Team
 			</p>
 		)}
@@ -40,9 +40,13 @@ interface ITechStackProps {
 	techStack: Array<SimpleIcon | Icon>;
 }
 const TechStack = ({ techStack }: ITechStackProps) => (
-	<div className="flex gap-x-4 mt-4 fill-white">
+	<div className="flex gap-x-4 mt-4">
 		{techStack.map((tech) => (
-			<SVGIcon key={tech.title} icon={tech} className="w-[20px] h-[20px]" />
+			<SVGIcon
+				key={tech.title}
+				icon={tech}
+				className="w-[20px] h-[20px] fill-black dark:fill-white"
+			/>
 		))}
 	</div>
 );
@@ -57,14 +61,24 @@ const Overview = ({ date, title, overview }: IOverviewProps) => (
 	<>
 		<p className="text-sm mt-4">{date}</p>
 		<h2 className="text-xl font-semibold">{title}</h2>
-		<div className="flex-1 text-white mt-2 overflow-hidden">
+		<div className="flex-1 mt-2 overflow-hidden">
 			<Markdown
 				components={{
 					em: ({ node, ...rest }) => {
-						return <em className={"not-italic text-amber-300"} {...rest} />;
+						return (
+							<em
+								className={"not-italic text-violet-900 dark:text-amber-300"}
+								{...rest}
+							/>
+						);
 					},
 					strong: ({ node, ...rest }) => {
-						return <strong className={"font-normal text-lime-300"} {...rest} />;
+						return (
+							<strong
+								className={"font-normal text-purple-700 dark:text-lime-300"}
+								{...rest}
+							/>
+						);
 					},
 				}}
 			>
@@ -105,7 +119,7 @@ const ActionLinks = ({ id, github, website, video }: IActionLinksProps) => (
 				</Button>
 			)}
 		</div>
-		<Button variant={"secondary"} asChild>
+		<Button asChild>
 			<p>Learn more</p>
 		</Button>
 	</div>
@@ -132,7 +146,7 @@ const WorkCard = ({ work }: IWorkCardProps) => {
 	return (
 		<div
 			className={cn(
-				"rounded-lg p-8 grid grid-rows-3 w-[325px] h-[525px] text-white backdrop-blur-lg shadow-[20px_20px_40px_-12px_rgba(0,0,0,0.3)] bg-gray-50/10 border-gray-500/40 transition-all duration-300",
+				"rounded-lg p-8 grid grid-rows-3 w-[325px] h-[525px] text-black dark:text-white backdrop-blur-lg shadow-[20px_20px_40px_-12px_rgba(0,0,0,0.3)] bg-gray-50/10 border-gray-500/40 transition-all duration-300",
 				"hover:scale-105",
 			)}
 		>
