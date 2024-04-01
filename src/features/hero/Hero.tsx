@@ -16,7 +16,7 @@ const Hero = () => {
 	return (
 		<div
 			className={cn(
-				"h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16",
+				"relative h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16",
 				!isNight
 					? "from-[#90dffe] to-[#38a3d1]"
 					: "from-[#202020] to-[#111119]",
