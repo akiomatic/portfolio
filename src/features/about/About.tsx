@@ -9,11 +9,11 @@ const About = () => {
 		<SectionContainer
 			id={"about"}
 			title={"About Me"}
-			className={"w-screen xl:w-[1400px]"}
+			className={"w-screen max-w-[1250px]"}
 		>
 			<div
 				className={cn(
-					"flex justify-center items-center gap-14 mx-10",
+					"flex justify-center items-center gap-14 px-12",
 					"flex-col lg:flex-row",
 					"text-base md:text-lg",
 				)}
