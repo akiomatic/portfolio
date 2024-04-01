@@ -39,7 +39,7 @@ const Item = ({ iconData }: IItemProps) => {
 					"relative mx-2.5 transition-all",
 					"hover:cursor-pointer hover:scale-125",
 					"w-[30px] md:w-[35px] h-[30px] md:h-[35px]",
-					isSimpleIcon(iconData) && "fill-white",
+					isSimpleIcon(iconData) && "fill-black dark:fill-white",
 				)}
 			>
 				{isSimpleIcon(iconData) ? (
