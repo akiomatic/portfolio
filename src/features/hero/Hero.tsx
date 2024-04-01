@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Terrain } from "@/features/hero/components/Terrain";
 import { cn } from "@/lib/utils";
@@ -8,18 +6,13 @@ import {
 	GitHubLogoIcon,
 	LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 
 const Hero = () => {
-	const { theme } = useTheme();
 	return (
 		<div
 			className={cn(
-				"relative h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16",
-				theme !== "dark"
-					? "from-[#90dffe] to-[#38a3d1]"
-					: "from-[#202020] to-[#111119]",
+				"relative h-screen w-full flex justify-center items-center flex-col-reverse md:flex-row bg-gradient-to-br transition-all duration-500 lg:p-0 gap-y-16 from-[#90dffe] to-[#38a3d1] dark:from-[#202020] dark:to-[#111119]",
 			)}
 		>
 			<div
@@ -27,7 +20,7 @@ const Hero = () => {
 					"before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-20 before:backdrop-blur"
 				}
 			>
-				<Terrain isNight={theme === "dark"} />
+				<Terrain />
 			</div>
 			<div
 				className={cn(
