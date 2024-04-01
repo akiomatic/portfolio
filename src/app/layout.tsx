@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/themes/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
@@ -25,8 +26,15 @@ export default function RootLayout({
 				/>
 			</head>
 			<body className={robotoMono.className}>
-				<main>{children}</main>
-				<Toaster />
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<main>{children}</main>
+					<Toaster />
+				</ThemeProvider>
 			</body>
 		</html>
 	);
