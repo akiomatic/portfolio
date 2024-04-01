@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -13,7 +14,6 @@ const NavbarContainer = ({ children }: INavbarContainerProps) => {
 				"w-full min-[380px]:w-11/12 lg:w-3/4 xl:w-2/3",
 				"px-5 md:px-6",
 				"justify-center sm:justify-between",
-				"text-sm sm:text-base",
 				"text-black dark:text-white",
 				" bg-white/40 dark:bg-gray-50/10 border-black/40 dark:border-gray-500/40",
 			)}
@@ -28,7 +28,20 @@ interface IHomeLinkProps {
 }
 
 const HomeLink = ({ children }: IHomeLinkProps) => {
-	return <div className={"hidden sm:flex"}>{children}</div>;
+	return (
+		<Button
+			variant={"ghost"}
+			className={cn(
+				"font-normal p-0",
+				"hover:bg-transparent",
+				"hidden sm:flex",
+				"text-sm sm:tex",
+			)}
+			asChild
+		>
+			{children}
+		</Button>
+	);
 };
 
 NavbarContainer.HomeLink = HomeLink;
