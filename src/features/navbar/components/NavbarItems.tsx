@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { ISection } from "@/features/navbar/Navbar";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -21,13 +22,16 @@ interface INavbarItemProps {
 
 const NavbarItem = ({ section }: INavbarItemProps) => {
 	return (
-		<div
+		<Button
 			className={cn(
-				"h-full py-1 rounded-full transition-all",
-				"hover:bg-white hover:bg-opacity-20 sm:hover:bg-opacity-30",
-				"sm:bg-white sm:bg-opacity-20",
+				"h-full py-1 rounded-full transition-all font-normal",
+				"hover:bg-gray-500/20 sm:hover:bg-gray-500/30 dark:hover:bg-white/20 dark:sm:hover:bg-white/30",
+				"bg-transparent sm:bg-gray-500/20 dark:sm:bg-white/20",
+				"shadow-none sm:shadow",
+				"text-black dark:text-white",
 				"px-4",
 			)}
+			asChild
 		>
 			<Link href={`#${section.targetId}`}>
 				<>
@@ -35,7 +39,7 @@ const NavbarItem = ({ section }: INavbarItemProps) => {
 					<p className={"hidden sm:block"}>{section.name}</p>
 				</>
 			</Link>
-		</div>
+		</Button>
 	);
 };
 
