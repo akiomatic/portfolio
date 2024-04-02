@@ -1,5 +1,4 @@
-import { JavaIcon } from "@/constants/external-icons";
-import { Icon } from "@/utils/types";
+import { Icon } from "@/constants/enums";
 import {
 	SimpleIcon,
 	siAmazondynamodb,
@@ -48,7 +47,7 @@ export const WORKS_DATA: Array<Work> = [
 		overview:
 			"An _Android app_ for students to **receive notifications** from their school, **solve quizzes**, and get to **know about the school**.",
 		image: "/images/placeholder-website.png",
-		techStack: [JavaIcon, siAndroidstudio, siFirebase, siZapier, siRss],
+		techStack: [Icon.Java, siAndroidstudio, siFirebase, siZapier, siRss],
 		video: "https://www.youtube.com/watch?v=6Ov1b9fMk4o",
 	},
 	{

@@ -1,7 +1,7 @@
+import SVGIcon from "@/components/icons/SVGIcon";
+import { Icon } from "@/constants/enums";
 import Tooltip from "@/features/skills/components/Tooltip";
-import { Skill } from "@/features/skills/constants/skills-data";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { cn, isSimpleIcon } from "@/lib/utils";
 import { ReactNode } from "react";
 import { SimpleIcon } from "simple-icons";
 
@@ -24,41 +24,20 @@ const SkillsContainer = ({ children, title }: ISkillsContainerProps) => {
 };
 
 interface IItemProps {
-	iconData: SimpleIcon | Skill;
+	iconData: SimpleIcon | Icon;
 }
-
-const isSimpleIcon = (iconData: SimpleIcon | Skill): iconData is SimpleIcon => {
-	return "path" in iconData;
-};
 
 const Item = ({ iconData }: IItemProps) => {
 	return (
-		<Tooltip title={iconData.title}>
+		<Tooltip title={isSimpleIcon(iconData) ? iconData.title : iconData}>
 			<div
 				className={cn(
 					"relative mx-2.5 transition-all",
 					"hover:cursor-pointer hover:scale-125",
 					"w-[30px] md:w-[35px] h-[30px] md:h-[35px]",
-					isSimpleIcon(iconData) && "fill-black dark:fill-white",
 				)}
 			>
-				{isSimpleIcon(iconData) ? (
-					<svg
-						role={"img"}
-						viewBox={"0 0 24 24"}
-						xmlns={"http://www.w3.org/2000/svg"}
-					>
-						<path d={iconData.path} />
-					</svg>
-				) : (
-					<Image
-						src={iconData.url}
-						alt={iconData.title}
-						className={"object-contain"}
-						fill
-						sizes="(max-width: 768px) 30px, 35px"
-					/>
-				)}
+				<SVGIcon icon={iconData} className={"fill-black dark:fill-white"} />
 			</div>
 		</Tooltip>
 	);
