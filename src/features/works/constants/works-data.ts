@@ -31,6 +31,7 @@ export interface Work {
 	team: boolean;
 	title: string;
 	overview: string;
+	content: string;
 	image: string;
 	techStack: Array<SimpleIcon | Icon>;
 	github?: string;
@@ -46,6 +47,7 @@ export const WORKS_DATA: Array<Work> = [
 		title: "Test App",
 		overview:
 			"An _Android app_ for students to **receive notifications** from their school, **solve quizzes**, and get to **know about the school**.",
+		content: "",
 		image: "/images/placeholder-website.png",
 		techStack: [Icon.Java, siAndroidstudio, siFirebase, siZapier, siRss],
 		video: "https://www.youtube.com/watch?v=6Ov1b9fMk4o",
@@ -57,6 +59,7 @@ export const WORKS_DATA: Array<Work> = [
 		title: "Stock manager",
 		overview:
 			"A _Line bot_ with Google Sheets to **automate** the process of **stock analysis**.",
+		content: "",
 		image: "/images/placeholder-website.png",
 		techStack: [siJavascript, siGoogleappsscript, siGooglesheets, siLine],
 		github: "https://www.github.com",
@@ -69,6 +72,7 @@ export const WORKS_DATA: Array<Work> = [
 		title: "Campus App",
 		overview:
 			"A all-in-one _cross-platform mobile app_ for students to **receive personalized notifications**, **check their announcements**, and more.",
+		content: "",
 		image: "/images/placeholder-website.png",
 		techStack: [siDart, siFlutter],
 		video: "https://www.youtube.com/watch?v=6Ov1b9fMk4o",
@@ -79,6 +83,7 @@ export const WORKS_DATA: Array<Work> = [
 		team: false,
 		title: "Mario",
 		overview: "A _website_ for a fictional plumber **to showcase his work**.",
+		content: "",
 		image: "/images/placeholder-website.png",
 		techStack: [siHtml5, siCss3, siJavascript],
 		github: "https://www.github.com",
@@ -90,6 +95,7 @@ export const WORKS_DATA: Array<Work> = [
 		title: "Codear",
 		team: false,
 		overview: "A _website_ for a fictional developer **to showcase his work**.",
+		content: "",
 		image: "/images/placeholder-website.png",
 		techStack: [
 			siJavascript,
@@ -109,6 +115,7 @@ export const WORKS_DATA: Array<Work> = [
 		team: true,
 		title: "Tascurator",
 		overview: "A _website_ for a fictional developer **to showcase his work**.",
+		content: "",
 		image: "/images/placeholder-website.png",
 		techStack: [
 			siTypescript,
@@ -127,6 +134,7 @@ export const WORKS_DATA: Array<Work> = [
 		team: false,
 		title: "Portfolio",
 		overview: "A _website_ for a fictional developer **to showcase his work**.",
+		content: "",
 		image: "/images/placeholder-website.png",
 		techStack: [
 			siTypescript,
