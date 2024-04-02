@@ -90,7 +90,7 @@ const Overview = ({ work }: IGlobalProps) => {
 };
 
 const ActionLinks = ({ work }: IGlobalProps) => {
-	const { github, website, video, content } = work;
+	const { id, github, website, video, content } = work;
 
 	return (
 		<div className="flex justify-between items-center mt-4">
@@ -122,8 +122,13 @@ const ActionLinks = ({ work }: IGlobalProps) => {
 					"disabled:pointer-events-auto disabled:cursor-not-allowed",
 				)}
 				disabled={!content}
+				asChild={!!content}
 			>
-				{!content ? "Coming soon..." : "Learn more"}
+				{!content ? (
+					"Coming soon..."
+				) : (
+					<Link href={`/work/${id}`}> Learn more</Link>
+				)}
 			</Button>
 		</div>
 	);
