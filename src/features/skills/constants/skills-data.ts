@@ -1,3 +1,4 @@
+import { Icon } from "@/constants/enums";
 import {
 	SimpleIcon,
 	siAmazondynamodb,
@@ -30,21 +31,16 @@ import {
 	siWebstorm,
 } from "simple-icons";
 
-export interface Skill {
-	title: string;
-	url: string;
-}
-
 interface SkillSet {
 	title: string;
-	skills: Array<SimpleIcon | Skill>;
+	skills: Array<SimpleIcon | Icon>;
 }
 
 export const SKILL_SETS: Array<SkillSet> = [
 	{
 		title: "Languages",
 		skills: [
-			{ title: "Java", url: "/icons/icon-java-dark.svg" },
+			Icon.Java,
 			siDart,
 			siHtml5,
 			siCss3,

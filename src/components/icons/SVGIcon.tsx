@@ -1,8 +1,7 @@
+import JavaIcon from "@/assets/icons/java.svg";
 import SIIcon from "@/components/icons/SIIcon";
-import { cn } from "@/lib/utils";
-import { isSimpleIcon } from "@/utils/helpers";
-import { Icon } from "@/utils/types";
-import Image from "next/image";
+import { Icon } from "@/constants/enums";
+import { cn, isSimpleIcon } from "@/lib/utils";
 import { SimpleIcon } from "simple-icons";
 
 interface ISVGIconProps {
@@ -11,15 +10,16 @@ interface ISVGIconProps {
 }
 
 const SVGIcon = ({ className, icon }: ISVGIconProps) => {
-	if (isSimpleIcon(icon)) {
-		return <SIIcon icon={icon} className={className} />;
+	if (!isSimpleIcon(icon)) {
+		switch (icon) {
+			case Icon.Java:
+				return <JavaIcon className={cn("h-6 w-6", className)} />;
+			default:
+				return null;
+		}
 	}
 
-	return (
-		<div className={cn("relative h-6 w-6", className)}>
-			<Image src={icon.dark} alt={icon.title} className={"object-fill"} fill />
-		</div>
-	);
+	return <SIIcon icon={icon} className={className} />;
 };
 
 export default SVGIcon;

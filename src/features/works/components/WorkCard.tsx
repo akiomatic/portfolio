@@ -1,8 +1,8 @@
 import SVGIcon from "@/components/icons/SVGIcon";
 import { Button } from "@/components/ui/button";
+import { Icon } from "@/constants/enums";
 import { Work } from "@/features/works/constants/works-data";
-import { cn } from "@/lib/utils";
-import { Icon } from "@/utils/types";
+import { cn, isSimpleIcon } from "@/lib/utils";
 import {
 	ExternalLinkIcon,
 	GitHubLogoIcon,
@@ -25,7 +25,7 @@ const ImageSection = ({ image, team }: IImageSectionProps) => (
 			src={image}
 			alt="Sample image"
 			fill
-			sizes="100vw"
+			sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 			className="object-cover rounded-lg"
 		/>
 		{team && (
@@ -43,7 +43,7 @@ const TechStack = ({ techStack }: ITechStackProps) => (
 	<div className="flex gap-x-4 mt-4">
 		{techStack.map((tech) => (
 			<SVGIcon
-				key={tech.title}
+				key={isSimpleIcon(tech) ? tech.slug : tech}
 				icon={tech}
 				className="w-[20px] h-[20px] fill-black dark:fill-white"
 			/>
