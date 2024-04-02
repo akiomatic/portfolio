@@ -35,7 +35,6 @@ const HomeLink = ({ children }: IHomeLinkProps) => {
 				"font-normal p-0",
 				"hover:bg-transparent",
 				"hidden sm:flex",
-				"text-sm sm:tex",
 			)}
 			asChild
 		>

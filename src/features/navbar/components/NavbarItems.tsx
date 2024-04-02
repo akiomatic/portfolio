@@ -26,8 +26,8 @@ const NavbarItem = ({ section }: INavbarItemProps) => {
 			className={cn(
 				"h-full py-1 rounded-full transition-all font-normal",
 				"hover:bg-gray-500/20 sm:hover:bg-gray-500/30 dark:hover:bg-white/20 dark:sm:hover:bg-white/30",
-				"sm:bg-gray-500/20 dark:sm:bg-white/20",
-				"text-sm sm:text-base",
+				"bg-transparent sm:bg-gray-500/20 dark:sm:bg-white/20",
+				"shadow-none sm:shadow",
 				"text-black dark:text-white",
 				"px-4",
 			)}

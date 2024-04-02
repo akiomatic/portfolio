@@ -22,7 +22,8 @@ export const ThemeToggle = () => {
 					className={cn(
 						"size-[30px] transition-all ring-transparent focus-visible:ring-transparent",
 						"hover:bg-gray-500/20 sm:hover:bg-gray-500/30 dark:hover:bg-white/20 dark:sm:hover:bg-white/30",
-						"sm:bg-gray-500/20 dark:sm:bg-white/20",
+						"shadow-none sm:shadow",
+						"bg-transparent sm:bg-gray-500/20 dark:sm:bg-white/20",
 					)}
 				>
 					<SunIcon className="size-[15px] text-black rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
